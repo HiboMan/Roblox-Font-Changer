@@ -4,11 +4,10 @@ echo 1) Regular Roblox
 echo 2) Bloxstrap
 set /p input=Choose an option:
 
-set "url=https://raw.githubusercontent.com/HiboMan/Roblox-Font-Changer/refs/heads/main/content.zip"
-set "tempZip=%temp%\content.zip"
+set "package=content.zip"
 
 echo Downloading content.zip...
-powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%tempZip%'"
+powershell -Command "Invoke-WebRequest -Uri '%url%' -OutFile '%package%'"
 
 if /I "%input%"=="1" (
     echo Searching for RobloxPlayerBeta.exe...
@@ -33,10 +32,11 @@ goto :end
 
 :extract
 echo Extracting to %target%...
-powershell -Command "Expand-Archive -Path '%tempZip%' -DestinationPath '%target%' -Force"
+powershell -Command "Expand-Archive -Path '%package%' -DestinationPath '%target%' -Force"
 echo Done!
 goto :end
 
 :end
 
 pause
+
