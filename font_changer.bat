@@ -1,11 +1,10 @@
 @echo off
-title font_changer - S0LVe
+title font_changer - HiboMan
 echo 1) Regular Roblox
 echo 2) Bloxstrap
-echo 3) Fishtrap
 set /p input=Choose an option:
 
-set "url=https://raw.githubusercontent.com/S0LVeStudios/Font-Changer/refs/heads/main/content.zip"
+set "url=https://raw.githubusercontent.com/HiboMan/Roblox-Font-Changer/refs/heads/main/content.zip"
 set "tempZip=%temp%\content.zip"
 
 echo Downloading content.zip...
@@ -29,11 +28,6 @@ if /I "%input%"=="2" (
     goto :extract
 )
 
-if /I "%input%"=="3" (
-    set "target=%localappdata%\Fishstrap\Modifications"
-    goto :extract
-)
-
 echo Invalid option!
 goto :end
 
@@ -44,4 +38,5 @@ echo Done!
 goto :end
 
 :end
+
 pause
