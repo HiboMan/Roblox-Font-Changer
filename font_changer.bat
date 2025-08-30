@@ -1,5 +1,5 @@
 @echo off
-title font_changer - HiboMan
+title font_changer
 echo 1) Regular Roblox
 echo 2) Bloxstrap
 set /p input=Choose an option:
